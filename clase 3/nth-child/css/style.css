@@ -1,0 +1,76 @@
+/*
+:first-child 
+:last-child;
+
+:first-of-type
+:last-of-type;
+
+
+:nth-child()
+:nth-of-type()
+		reciben parametros
+		numero			5(quinto elemento)
+		multiplo n-----  2n(de 2 en dos)
+		formula          3n+1(1,4,7)
+
+*/
+article :first-child{ /* colorea el primer hijo de este elemento*/
+	color: red;
+}
+p:last-child{ /* colorea al parrafo si es que el es el ultimo hijo (esta junto) en este caso no lo es no lo colorea*/
+	color:blue;
+}
+
+span:last-child{ /*el si el el ultimo hijo de su contendetr si lo colorea*/
+	color:blue;
+}
+
+
+p:first-of-type{/*p el primer tipo y si el lo es lo solorea*/
+	color: pink;
+}
+
+p:last-of-type{/*colorea al ultimo typo si es que lo es en este caso si*/
+	color:green;
+}
+
+p :last-of-type{/*intenta pintar al ultimo parrafo del p pero no tiene hijos no se colorea nada*/
+
+} 
+
+/* la separacion (selector :pseudoclase) indica que se aplica a hijo*/
+/* no separacion (selector:pseudoclase) indica que se aplicara a el mismo*/
+
+
+h2:nth-child(1){/*selecciona el primer elemento hijo si es el si lo pinta*/
+color: red;
+}
+
+section :nth-child(2n){ /*selecction de 2 en 2 de los hijos de section*/
+	color: green;
+}
+
+h2:nth-of-type(3){ /*el tercero de los tipos h2*/
+	color: skyblue;
+}
+
+
+li:nth-child(n+4){/*a partir del element n hasta el final*/
+   color:green;
+}
+
+
+
+li:nth-child(-n+2){/*los  2 primeros elementos */
+   color:red;
+}
+
+li:nth-last-child(-n+4){/*nth-last-child parde desde el final hacia el ñrincipio*/
+		/*colorea los 4 ultimos   -n para hacerle 0   +4 avanza 4 pero inversamente
+		partiendo del 
+		*/
+}
+
+#lista :nth-last-child(-n+7){
+	color: blue;
+}

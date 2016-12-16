@@ -1,0 +1,60 @@
+/*
+margin
+  margin-top:    1
+  margin-right:  2
+  margin-bottom: 3
+  margin-lef:    4
+tambien con shorst-hand
+ margin (1 valore) :  1em (1,2,3,4);
+ margin  (2 valores):  1em (1,3)  1em(2,4);
+ margin (3valores)  :  1em (1)     1em(2,4)      1em(3);
+ margin (4 valores) :   1em (1)     1em(2)      1em(3)   1em(4);
+
+tips sentido horario  segun variables 
+
+se pueden ser margenes negativos 
+*/
+[class^="box"]{
+	background: red;
+	width: 200px;
+	height: 200px;
+
+}
+.box1{
+	margin-bottom: 2em; /*se agrega margen abajo*/
+}
+.box2{
+	margin-top: 2em; /* se agrega margen arriba*/
+}
+/*amos son de la misma altura se absorven no se suman solo abra separacion de 2em*/
+
+/*
+(vertical)
+margenes collapsados en dos elementos con margen que se intercepten
+o se superponen no se suman solo el mayor abnsorve al menor ya que es intercepcion
+
+
+margenes de elementos hijos saltan hacia arriba (afuera)debido a que el padre no tiene el padding(o separacion con el hijo)
+se arregla agregando padding
+
+*/
+.padre{
+	background: yellow;
+}
+
+.hijo{
+	margin-top: 70px;
+	
+}
+/*
+
+padding similar a los margin
+pading no collpasa (mas seguro para cuando no se sabe si al agregar margin colapsara con otra caja)
+padding no hay padding negativo
+los pading con % pueden usarse para crear cajas con proporcion (lo toma de su contenedro)
+*/
+
+.radio{
+ background: red;
+ padding-top: 50%; /* div radio esta denro de body que es toda la pantalla*/
+}

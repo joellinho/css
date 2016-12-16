@@ -1,0 +1,87 @@
+/*
+familias tipograficas
+comerciales arial ,verdana,times new roman,helvetica ,ubuntu
+
+familias genéricas 
+segun sus caracteristicas
+serif (adornos en los remates- seripa)
+san-serif (sin adorno en los remates -de palo seco) 
+ cursive  
+  monospace () todos coupan el mismo espacio espacial 
+*/
+h1 {
+	font-family: cursive;
+	
+
+}
+
+p {
+
+	font-family: cursive;
+		font-weight: normal;
+		text-transform: capitalize;
+		font-size: 2em; /* relativo al tamaño de su ancestro (body 1m =16px) que es 32px	*/
+	
+}
+
+p span{
+	font-size: 1em;/*relativo al contexto(ancestro) p tiene 2em (32px) y span es 1em( 32px)*/
+	text-transform: uppercase;
+}
+
+body{
+
+	text-align: center;
+}
+
+div p {
+	font-family: "Times New Roman",oswald,verdana,serif;
+	font-size: 1rem;  /*rem es relativo al <html> (1rem =16 px) no ereda el tamaño del contextp*/
+	font-style: italic;
+} /* las fuentes la busca en oden separado por comas (si no esta en el sistema indecar una url)
+*/
+li {
+
+	 text-align: left;
+	 font-size: .9em; /* XX el tamaño se ira progpagando en sus elementos hijos haciendpose cada vez mas pqeueño */
+	 font-size: .9rem;
+}
+
+/*centrando un texto en un div perfectamente*/
+ 	div#caja {
+	width: 300px;
+	height: 100px;
+	background: yellow;
+	font-size: 3em;
+	text-align: center; /*centramos el texto*/
+	line-height: 100px; /*altura de la linea que agrega 50% margen arrib ay abajo si es igual al tamañoi de lca caja ce centra perfectamente*/
+	text-transform: capitalize;
+	letter-spacing: 20px;
+}
+
+/*text-align center left right y justified(llena los espacios laterales como texto)
+	text-decoration : underline | none (sin subrayado)
+	font-weidth : bold | normal
+	font-style : italic | normal
+	letter-spacing :value espaciado de las letras
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+tamaños de las fuentes 
+px > tamaño absoluto
+em > tamaño relativo al contexto
+rem > tamaño relativo al <html>
+%  >tamaño real de una fuente
+vh > 1vh es el 1% del alto viewPort(tamaño de la pantalla normal o redimensionada)
+vw > 1vw es el 1% del ancho viewPort(tamaño de la pantalla normal o redimensionada)

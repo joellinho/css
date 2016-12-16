@@ -1,0 +1,48 @@
+/*
+selector universal selcciona todos los elementos no es buena pracica 
+*{
+	box-sizing :border-box;
+}
+selectores por clase etiquesta id (estandares)
+selectores hermanos (etiquetas que estan en el mismo nivel)
+	1. Hermano siguiente(singular) a + b  (hermano inmediato)
+		b esta justo despues de a (se selcciona b)
+	2. Hermanos siguientes(plural) a ~ b
+		b o varios b estan despues de a ,asi hayga otros ente ellos se seleccion a todos b
+
+*/
+
+h1 ~ p{
+	color: blue;/*todos los selectores sigueintes al mismo nivel que h1 */
+}
+h2 + p{
+	color:red; /*solo el siguiente  al mismo nivel que h2 (p)*/
+}
+h3 + div p { /* hermano del h3 (mismo nivel) eh hijo del div (p)*/
+	color: red;
+}
+ /*
+selectores por atributos 
+ */
+[class]{
+	color:red;
+}
+[target]{
+	font-style: italic;
+}
+/*aceptan comodines
+$   termina con
+^   comienza con
+*	contiene a
+
+
+*/
+[src$="jpg"]{
+	height: 70px;
+	width: 70px;
+
+}
+[src^="img/j"]{
+	border-radius: 50%;
+	
+}

@@ -1,0 +1,34 @@
+
+.parrafo{
+	background: red;
+	font-size: 20px;
+}
+
+p , ul {
+
+	font-size: 30px;
+}
+#cabecera{
+	color: green;
+}
+
+ li  ul { /* el elmentto hijo de li (lu y su sub hijo)*/
+	color: blue;
+}
+
+body>ul{ /*solo el elemento siguiente de bodu*/
+
+	color: skyblue;
+}
+/* 
+selectores de etiqueta especificidad de 1  (etiqueta)
+de clasess y seudoclases 10			(.class)
+id 100								(#id)
+estilos en linea 1000				<etiqueta style>
+
+
+
+
+la cascada es cuando se definen 2 estilos uno despues del otro en la hoja de estilos 
+pues toma el ultimoSS
+*/

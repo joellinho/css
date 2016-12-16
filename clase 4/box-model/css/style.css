@@ -1,0 +1,69 @@
+/*
+box-model:;
+como e navegador dibuja una caja en pantalla con todas sus propiedades
+
+elementos internos
+	content : contenido (content-box)
+	padding: espacion entre el contendio y el limite de la caja (padding-box)
+	border: lina alrededor de la caja  (border-box)
+externo
+	margin: espacio entre una caja y otra
+
+dimensiones de una caja
+	content+padding+border
+
+si no son declaradas
+ancho
+	totacl del contenedor (bloque)
+	total del contenido (inline)
+alto
+	definido por su contendio
+
+box-sizing(css3) (controla como se renderiza el tamaño de la caja)
+content-box  por defecto se le sumara al content-box el padding
+padding-box
+border-box	 recomendado  el contendia se desplazara el padding se toma hacia addentro
+
+
+recomendacion()
+*{
+	box-sizing : border-box;
+}
+
+*/
+
+
+#parrafo {
+	width: 400px;
+	height: 200px;
+	background: yellow;
+	padding: 40px;
+	border: 2px solid black;
+	/*tamaño final 444(400+20+20+2+2)*244(200+20+20+2+2)*/
+	box-sizing: border-box; /*aseguramos que la caja mida 400 exacto hasta el brode (border box)*/
+}
+
+
+/*
+	dimensiones en porcentajes
+	
+	siempre se calcula al ancho del contendero (su padre)
+	ejemplo 
+	width = 100pX
+	padding-top =20%   (100*2/100) pero no es asi es al contender de su padre en este caso si fuera el mismo si
+	
+
+	el alto
+	no se puede en % a menos que el padre este definido en pixeles exactos
+
+*/
+
+.contenedor{/*supongamos 1000*/
+	background: yellow;
+
+}
+.contenido{
+	width: 50%;/* ancho seria 500*/
+	border :2px solid;/* ancho seria 504*/
+	box-sizing: border-box; /*regresamos a  500 metemos el borde y padding*/
+}
